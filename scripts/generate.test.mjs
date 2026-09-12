@@ -22,7 +22,7 @@ test('生成、check、余剰ファイル整理と不正入力時の非破壊性
     assert.equal(await generate({ root }), 5);
     assert.equal(await generate({ root, check: true }), 5);
     const stale = join(root, 'src/react/OldIcon.tsx');
-    await cp(join(root, 'src/react/Home.tsx'), stale);
+    await cp(join(root, 'src/react/HomeIcon.tsx'), stale);
     const withStale = await snapshot(root);
     await assert.rejects(generate({ root, check: true }), /OldIcon/);
     assert.deepEqual(await snapshot(root), withStale);
@@ -41,8 +41,8 @@ test('生成、check、余剰ファイル整理と不正入力時の非破壊性
     assert.equal(await generate({ root }), 7);
     await rm(source);
     assert.equal(await generate({ root }), 5);
-    await assert.rejects(readFile(join(root, 'src/react/Home.tsx')), { code: 'ENOENT' });
-    await assert.rejects(readFile(join(root, 'packages/astro/Home.astro')), { code: 'ENOENT' });
+    await assert.rejects(readFile(join(root, 'src/react/HomeIcon.tsx')), { code: 'ENOENT' });
+    await assert.rejects(readFile(join(root, 'packages/astro/HomeIcon.astro')), { code: 'ENOENT' });
     const generated = await snapshot(root);
     await generate({ root });
     assert.deepEqual(await snapshot(root), generated);

@@ -8,10 +8,11 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { build as bundle } from 'esbuild';
 import { build as buildAstro } from 'astro';
 import * as components from '@lism-css/icons/react';
-import Home from '@lism-css/icons/react/Home';
+import HomeIcon from '@lism-css/icons/react/HomeIcon';
 import { icons as data } from '@lism-css/icons/data';
 import { readSvgIcons, packageDir } from './config.mjs';
 import { normalizeSvg } from './normalize-svg.mjs';
+import { componentName } from './generate.mjs';
 
 const icons = await Promise.all(
   (await readSvgIcons(join(packageDir, 'src/svg'))).map(async ({ id }) => ({
@@ -20,11 +21,6 @@ const icons = await Promise.all(
   }))
 );
 
-const componentName = (id) =>
-  id
-    .split('-')
-    .map((part) => part[0].toUpperCase() + part.slice(1))
-    .join('');
 const render = (Component, props, children) => renderToStaticMarkup(createElement(Component, props, children));
 const svgRoot = (html) => html.match(/<svg\b[^>]*>/)?.[0] ?? '';
 const assertNoDuplicateAttributes = (root, label) => {
@@ -54,9 +50,9 @@ test('全SVGのReact公開コンポーネントをSSRでき、形状と属性を
 });
 
 test('Reactの個別importで利用者の属性・title・アクセシビリティ指定が有効になる', () => {
-  assert.equal(Home, components.Home);
+  assert.equal(HomeIcon, components.HomeIcon);
   const html = render(
-    Home,
+    HomeIcon,
     { strokeWidth: 2, width: 32, className: 'icon', 'data-test': 'home', 'aria-labelledby': 'home-title' },
     createElement('title', { id: 'home-title' }, 'ホーム')
   );
@@ -65,12 +61,12 @@ test('Reactの個別importで利用者の属性・title・アクセシビリテ�
     assert.ok(root.includes(attribute), attribute);
   assert.doesNotMatch(root, /aria-hidden=/);
   assert.match(html, /<title id="home-title">ホーム<\/title>/);
-  assert.match(svgRoot(render(Home, { 'aria-hidden': false })), /aria-hidden="false"/);
-  const sized = svgRoot(render(Home, { size: 32 }));
+  assert.match(svgRoot(render(HomeIcon, { 'aria-hidden': false })), /aria-hidden="false"/);
+  const sized = svgRoot(render(HomeIcon, { size: 32 }));
   assert.match(sized, /width="32" height="32"/);
   assert.doesNotMatch(sized, /\bsize=/);
-  assert.match(svgRoot(render(Home, { size: 32, height: '2em' })), /width="32" height="2em"/);
-  assert.match(svgRoot(render(Home, { 'aria-label': 'ホーム' })), /role="img"/);
+  assert.match(svgRoot(render(HomeIcon, { size: 32, height: '2em' })), /width="32" height="2em"/);
+  assert.match(svgRoot(render(HomeIcon, { 'aria-label': 'ホーム' })), /role="img"/);
 });
 
 test('Reactのweightは線幅へ変換され、strokeWidthが優先される', () => {
@@ -79,20 +75,20 @@ test('Reactのweightは線幅へ変換され、strokeWidthが優先される', (
     ['regular', '1.5'],
     ['bold', '2'],
   ]) {
-    const root = svgRoot(render(Home, { weight }));
+    const root = svgRoot(render(HomeIcon, { weight }));
     assert.match(root, new RegExp(`stroke-width="${width}"`), weight);
     assert.doesNotMatch(root, /\bweight=/);
   }
-  assert.match(svgRoot(render(Home, { weight: 'light', strokeWidth: 3 })), /stroke-width="3"/);
-  const fill = svgRoot(render(components.HeartFill, { weight: 'bold' }));
+  assert.match(svgRoot(render(HomeIcon, { weight: 'light', strokeWidth: 3 })), /stroke-width="3"/);
+  const fill = svgRoot(render(components.HeartFillIcon, { weight: 'bold' }));
   assert.match(fill, /stroke="none"/);
   assert.doesNotMatch(fill, /\bweight=/);
-  assert.doesNotMatch(svgRoot(render(components.HeartFill)), /stroke-width=/);
+  assert.doesNotMatch(svgRoot(render(components.HeartFillIcon)), /stroke-width=/);
 });
 
-test('barrelからHomeだけをbundleすると他のアイコンの形状を含まない', async () => {
+test('barrelからHomeIconだけをbundleすると他のアイコンの形状を含まない', async () => {
   const result = await bundle({
-    stdin: { contents: 'export { Home } from "@lism-css/icons/react";', resolveDir: packageDir },
+    stdin: { contents: 'export { HomeIcon } from "@lism-css/icons/react";', resolveDir: packageDir },
     bundle: true,
     write: false,
     format: 'esm',
@@ -116,17 +112,17 @@ test('Astroで全SVG・個別import・線幅の両記法・slotを実際にビ�
       join(fixtureDir, 'src/pages/index.astro'),
       `---
 import * as Icons from '@lism-css/icons/astro';
-import Home from '@lism-css/icons/astro/Home';
+import HomeIcon from '@lism-css/icons/astro/HomeIcon';
 ---
 <html><body>
 {Object.entries(Icons).map(([name, Component]) => <Component data-icon={name} />)}
-<Home data-case="alias" strokeWidth={2} width={32} class="icon" aria-labelledby="home-title"><title id="home-title">ホーム</title></Home>
-<Home data-case="native" stroke-width={1} strokeWidth={2} aria-label="ホーム" />
-<Home data-case="visible" aria-hidden={false} />
-<Home data-case="sized" width="2.5em" height="2.5em" focusable="true" role="presentation" />
-<Home data-case="size" size="2em" height="3em" />
-<Home data-case="weight" weight="bold" />
-<Home data-case="weight-override" weight="light" strokeWidth={3} />
+<HomeIcon data-case="alias" strokeWidth={2} width={32} class="icon" aria-labelledby="home-title"><title id="home-title">ホーム</title></HomeIcon>
+<HomeIcon data-case="native" stroke-width={1} strokeWidth={2} aria-label="ホーム" />
+<HomeIcon data-case="visible" aria-hidden={false} />
+<HomeIcon data-case="sized" width="2.5em" height="2.5em" focusable="true" role="presentation" />
+<HomeIcon data-case="size" size="2em" height="3em" />
+<HomeIcon data-case="weight" weight="bold" />
+<HomeIcon data-case="weight-override" weight="light" strokeWidth={3} />
 </body></html>`
     );
     await buildAstro({ root: pathToFileURL(`${fixtureDir}/`), configFile: false, logLevel: 'silent' });

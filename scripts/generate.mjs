@@ -6,11 +6,12 @@ import { readSvgIcons, packageDir } from './config.mjs';
 import { normalizeSvg } from './normalize-svg.mjs';
 
 const header = '// 自動生成: scripts/generate.mjs（編集元: src/svg/）\n';
-const componentName = (id) =>
+// UI側のAlert・Menu等と名前が衝突しないよう、コンポーネント名はIcon接尾辞付きにする。
+export const componentName = (id) =>
   id
     .split('-')
     .map((part) => part[0].toUpperCase() + part.slice(1))
-    .join('');
+    .join('') + 'Icon';
 const reactAttribute = (key) =>
   key.startsWith('aria-') || key.startsWith('data-') ? key : key.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 const attributesText = (attributes, react = false) =>
