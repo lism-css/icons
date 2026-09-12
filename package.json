@@ -1,6 +1,6 @@
 {
   "name": "@lism-css/icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "SVG icons for React and Astro.",
   "license": "MIT",
   "type": "module",
