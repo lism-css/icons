@@ -18,3 +18,6 @@ node_modules/
 
 # husky が生成するフックのラッパー（.husky/ 直下の本体は Git 管理）
 .husky/_/
+
+# Illustrator が保存中に作る一時ファイル
+design/~ai-*.tmp

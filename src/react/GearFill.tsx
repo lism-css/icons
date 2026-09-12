@@ -1,9 +1,9 @@
 // 自動生成: scripts/generate.mjs（編集元: src/svg/）
 import { forwardRef, type SVGProps } from 'react';
 
-export type GearFillProps = SVGProps<SVGSVGElement> & { size?: number | string };
+export type GearFillProps = SVGProps<SVGSVGElement> & { size?: number | string; weight?: 'light' | 'regular' | 'bold' };
 const GearFill = /* @__PURE__ */ forwardRef<SVGSVGElement, GearFillProps>(function GearFill(
-  { children, size = '1em', width = size, height = size, ...props },
+  { children, size = '1em', width = size, height = size, weight, strokeWidth = weight && { light: 1, regular: 1.5, bold: 2 }[weight], ...props },
   ref
 ) {
   const labelled = Boolean(props['aria-label'] || props['aria-labelledby']);
@@ -15,6 +15,7 @@ const GearFill = /* @__PURE__ */ forwardRef<SVGSVGElement, GearFillProps>(functi
       stroke="none"
       width={width}
       height={height}
+      strokeWidth={strokeWidth}
       focusable="false"
       aria-hidden={labelled ? undefined : true}
       role={labelled ? 'img' : undefined}

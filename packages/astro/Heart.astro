@@ -1,9 +1,10 @@
 ---
 // 自動生成: scripts/generate.mjs（編集元: src/svg/）
 import type { HTMLAttributes } from 'astro/types';
-type Props = HTMLAttributes<'svg'> & { size?: number | string; strokeWidth?: number | string };
+type Props = HTMLAttributes<'svg'> & { size?: number | string; strokeWidth?: number | string; weight?: 'light' | 'regular' | 'bold' };
 const {
-  strokeWidth,
+  weight,
+  strokeWidth = weight && { light: 1, regular: 1.5, bold: 2 }[weight],
   'stroke-width': nativeStrokeWidth,
   size = '1em',
   width = size,

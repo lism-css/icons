@@ -33,7 +33,13 @@ import { Home, StarHalf } from '@lism-css/icons/astro';
 
 大きさは`size`で幅・高さをまとめて指定でき、既定は`1em`です。`width`・`height`を個別に指定した場合はそちらを優先します。色は`currentColor`で周囲の文字色を引き継ぎます。線幅の既定は`1.5`で、Reactでは`strokeWidth`、Astroでは`stroke-width`で指定できます。Astroでは`strokeWidth`も受け付け、両方あれば`stroke-width`を優先します。
 
-`StarHalf`は左半分の塗りと外周の線を組み合わせており、線幅の変更は外周に反映されます。`HeartFill`など塗りだけのアイコンは線幅で太さが変わりません。`NoteFill`など、塗り版でも線を残すアイコンでは、その線に線幅指定が適用されます。
+線幅は`weight`で段階名としても指定できます。`light`・`regular`・`bold`がそれぞれ線幅`1`・`1.5`・`2`に変換され、`strokeWidth`（Astroでは`stroke-width`も）を併記した場合はそちらを優先します。`weight`はSVG属性としては出力しません。
+
+```tsx
+<Home weight="bold" />
+```
+
+塗り版は`HeartFill`のように別コンポーネントで、`weight`で線と塗りを切り替えることはできません。`StarHalf`は左半分の塗りと外周の線を組み合わせており、線幅の変更は外周に反映されます。`HeartFill`など塗りだけのアイコンは線幅で太さが変わりません。`BadFill`・`BanFill`・`BookFill`・`CalendarFill`・`GoodFill`・`NoteFill`のように塗り版でも線を残すアイコンでは、その線に線幅指定が適用され、塗りの外形は変わりません。
 
 通常は装飾として読み上げ対象から外します。アイコン単体に意味を持たせる場合は`aria-label`か`aria-labelledby`を指定してください。標準のSVG属性を渡せるほか、Reactでは`ref`と子要素、Astroではslotも使用できます。
 

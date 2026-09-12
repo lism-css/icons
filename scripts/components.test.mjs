@@ -73,6 +73,23 @@ test('Reactの個別importで利用者の属性・title・アクセシビリテ�
   assert.match(svgRoot(render(Home, { 'aria-label': 'ホーム' })), /role="img"/);
 });
 
+test('Reactのweightは線幅へ変換され、strokeWidthが優先される', () => {
+  for (const [weight, width] of [
+    ['light', '1'],
+    ['regular', '1.5'],
+    ['bold', '2'],
+  ]) {
+    const root = svgRoot(render(Home, { weight }));
+    assert.match(root, new RegExp(`stroke-width="${width}"`), weight);
+    assert.doesNotMatch(root, /\bweight=/);
+  }
+  assert.match(svgRoot(render(Home, { weight: 'light', strokeWidth: 3 })), /stroke-width="3"/);
+  const fill = svgRoot(render(components.HeartFill, { weight: 'bold' }));
+  assert.match(fill, /stroke="none"/);
+  assert.doesNotMatch(fill, /\bweight=/);
+  assert.doesNotMatch(svgRoot(render(components.HeartFill)), /stroke-width=/);
+});
+
 test('barrelからHomeだけをbundleすると他のアイコンの形状を含まない', async () => {
   const result = await bundle({
     stdin: { contents: 'export { Home } from "@lism-css/icons/react";', resolveDir: packageDir },
@@ -108,12 +125,14 @@ import Home from '@lism-css/icons/astro/Home';
 <Home data-case="visible" aria-hidden={false} />
 <Home data-case="sized" width="2.5em" height="2.5em" focusable="true" role="presentation" />
 <Home data-case="size" size="2em" height="3em" />
+<Home data-case="weight" weight="bold" />
+<Home data-case="weight-override" weight="light" strokeWidth={3} />
 </body></html>`
     );
     await buildAstro({ root: pathToFileURL(`${fixtureDir}/`), configFile: false, logLevel: 'silent' });
     const html = await readFile(join(fixtureDir, 'dist/index.html'), 'utf8');
     const svgs = [...html.matchAll(/<svg\b[^>]*>[\s\S]*?<\/svg>/g)].map(([svg]) => svg);
-    assert.equal(svgs.length, icons.length + 5);
+    assert.equal(svgs.length, icons.length + 7);
     for (const icon of icons) {
       const svg = svgs.find((value) => svgRoot(value).includes(`data-icon="${componentName(icon.id)}"`));
       assert.ok(svg, icon.id);
@@ -136,7 +155,13 @@ import Home from '@lism-css/icons/astro/Home';
     assert.match(sizeCase, /width="2em"/);
     assert.match(sizeCase, /height="3em"/);
     assert.doesNotMatch(sizeCase, /\bsize=/);
-    for (const name of ['alias', 'native', 'visible', 'sized', 'size']) {
+    const weightCase = svgRoot(svgs.find((svg) => svgRoot(svg).includes('data-case="weight"')));
+    assert.match(weightCase, /stroke-width="2"/);
+    assert.doesNotMatch(weightCase, /\bweight=/);
+    const weightOverride = svgRoot(svgs.find((svg) => svgRoot(svg).includes('data-case="weight-override"')));
+    assert.match(weightOverride, /stroke-width="3"/);
+    assert.doesNotMatch(weightOverride, /\bweight=|strokeWidth=/);
+    for (const name of ['alias', 'native', 'visible', 'sized', 'size', 'weight', 'weight-override']) {
       assertNoDuplicateAttributes(svgRoot(svgs.find((svg) => svgRoot(svg).includes(`data-case="${name}"`))), name);
     }
     const sized = svgRoot(svgs.find((svg) => svgRoot(svg).includes('data-case="sized"')));

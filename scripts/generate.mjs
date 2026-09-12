@@ -18,15 +18,22 @@ const attributesText = (attributes, react = false) =>
     .map(([key, value]) => `${react ? reactAttribute(key) : key}="${value}"`)
     .join(' ');
 
+// weightは線幅の段階名。生成物が共有モジュールへ依存しないよう、変換表は各コンポーネントへ埋め込む。
+const weightType = `'light' | 'regular' | 'bold'`;
+const weightToStrokeWidth = `weight && { light: 1, regular: 1.5, bold: 2 }[weight]`;
+const strokeWidthDefault = (strokeWidth) => (strokeWidth ? ` ?? ${JSON.stringify(strokeWidth)}` : '');
+
+// 既定のstroke-widthは属性文字列に含めず、strokeWidth・weightの分割代入と合わせて出力する。
 function reactSource(name, normalized) {
-  const defaults = attributesText({ xmlns: 'http://www.w3.org/2000/svg', viewBox: normalized.viewBox, ...normalized.attributes }, true);
+  const { 'stroke-width': strokeWidth, ...attributes } = normalized.attributes;
+  const defaults = attributesText({ xmlns: 'http://www.w3.org/2000/svg', viewBox: normalized.viewBox, ...attributes }, true);
   const body = normalized.body.replace(/([\w-]+)=/g, (_, key) => `${reactAttribute(key)}=`);
   return `${header}import { forwardRef, type SVGProps } from 'react';
 
-export type ${name}Props = SVGProps<SVGSVGElement> & { size?: number | string };
-const ${name} = /* @__PURE__ */ forwardRef<SVGSVGElement, ${name}Props>(function ${name}({ children, size = '1em', width = size, height = size, ...props }, ref) {
+export type ${name}Props = SVGProps<SVGSVGElement> & { size?: number | string; weight?: ${weightType} };
+const ${name} = /* @__PURE__ */ forwardRef<SVGSVGElement, ${name}Props>(function ${name}({ children, size = '1em', width = size, height = size, weight, strokeWidth = ${weightToStrokeWidth}, ...props }, ref) {
   const labelled = Boolean(props['aria-label'] || props['aria-labelledby']);
-  return <svg ${defaults} width={width} height={height} focusable="false" aria-hidden={labelled ? undefined : true} role={labelled ? 'img' : undefined} {...props} ref={ref}>${body}{children}</svg>;
+  return <svg ${defaults} width={width} height={height} strokeWidth={strokeWidth${strokeWidthDefault(strokeWidth)}} focusable="false" aria-hidden={labelled ? undefined : true} role={labelled ? 'img' : undefined} {...props} ref={ref}>${body}{children}</svg>;
 });
 
 export default ${name};
@@ -39,11 +46,11 @@ function astroSource(normalized) {
   const defaults = attributesText({ xmlns: 'http://www.w3.org/2000/svg', viewBox: normalized.viewBox, ...attributes });
   return `---
 ${header}import type { HTMLAttributes } from 'astro/types';
-type Props = HTMLAttributes<'svg'> & { size?: number | string; strokeWidth?: number | string };
-const { strokeWidth, 'stroke-width': nativeStrokeWidth, size = '1em', width = size, height = size, focusable = 'false', 'aria-hidden': ariaHidden, role, ...props } = Astro.props;
+type Props = HTMLAttributes<'svg'> & { size?: number | string; strokeWidth?: number | string; weight?: ${weightType} };
+const { weight, strokeWidth = ${weightToStrokeWidth}, 'stroke-width': nativeStrokeWidth, size = '1em', width = size, height = size, focusable = 'false', 'aria-hidden': ariaHidden, role, ...props } = Astro.props;
 const labelled = Boolean(props['aria-label'] || props['aria-labelledby']);
 ---
-<svg ${defaults} width={width} height={height} focusable={focusable} aria-hidden={ariaHidden ?? (labelled ? undefined : true)} role={role ?? (labelled ? 'img' : undefined)} stroke-width={nativeStrokeWidth ?? strokeWidth${strokeWidth ? ` ?? ${JSON.stringify(strokeWidth)}` : ''}} {...props}>${normalized.body}<slot /></svg>
+<svg ${defaults} width={width} height={height} focusable={focusable} aria-hidden={ariaHidden ?? (labelled ? undefined : true)} role={role ?? (labelled ? 'img' : undefined)} stroke-width={nativeStrokeWidth ?? strokeWidth${strokeWidthDefault(strokeWidth)}} {...props}>${normalized.body}<slot /></svg>
 `;
 }
 
