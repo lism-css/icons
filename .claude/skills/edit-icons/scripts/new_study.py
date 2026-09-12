@@ -30,7 +30,7 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r"\d\d", args.section):
         parser.error("--section must be a two-digit ID")
-    source = (args.source_path or root / "design/original/lism-icons-geometric-study.ai").resolve()
+    source = (args.source_path or root / "design/lism-icons-geometric-study.ai").resolve()
     if not source.is_file():
         parser.error(f"Illustrator file not found: {source}")
 

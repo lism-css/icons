@@ -16,7 +16,7 @@ def main():
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--apply", action="store_true")
     args = parser.parse_args()
-    source = (args.source_path or root / "design/original/lism-icons-geometric-study.ai").resolve()
+    source = (args.source_path or root / "design/lism-icons-geometric-study.ai").resolve()
     if not source.is_file():
         parser.error(f"Illustrator file not found: {source}")
     work = Path(tempfile.mkdtemp(prefix="lism-symbol-library-")).resolve()

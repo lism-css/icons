@@ -6,11 +6,11 @@
 
 ## 編集元
 
-編集元は`design/original/lism-icons-geometric-study.ai`の`01 Editable masters - 24px`レイヤーです。原寸マスターはregular・fill一覧の位置にあります。各アイコンを名前付きグループにし、塗りも線もない24×24の矩形をグループに含めて座標枠を保ちます。名前は小文字のkebab-caseとし、SVG名・コンポーネント名になります。
+編集元は`design/lism-icons-geometric-study.ai`の`01 Editable masters - 24px`レイヤーです。原寸マスターはregular・fill一覧の位置にあります。各アイコンを名前付きグループにし、塗りも線もない24×24の矩形をグループに含めて座標枠を保ちます。名前は小文字のkebab-caseとし、SVG名・コンポーネント名になります。
 
 `design/lism-icons.ai`は同期で作り直す出力専用ファイルです。原寸アートボードとアイコンだけを持ち、ガイド・一覧・説明は含みません。出力用.aiや生成済みSVGへの編集は、次の同期で置き換わります。
 
-アイコンの設計・一覧・作図説明の扱いは[設計文書](../design/original/design.md)を参照してください。
+アイコンの設計・一覧・作図説明の扱いは[設計文書](../design/design.md)を参照してください。
 
 ガイドの共通シンボルと透明な座標枠は設計用.aiだけで使います。同期は原寸マスターレイヤーのみを読み取り、原寸内部にシンボルがあれば出力を変更する前に停止します。ガイドの整理・再配置は[edit-iconsの制作操作](../.claude/skills/edit-icons/references/editing.md#制作操作)で行い、ビルドから設計用.aiの配置を変更しません。
 

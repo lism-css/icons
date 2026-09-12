@@ -21,7 +21,7 @@ def main():
     args = parser.parse_args()
     if any(not re.fullmatch(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*", icon) for icon in args.icons):
         parser.error("Use kebab-case icon names")
-    source = args.source_path or root / "design/original/lism-icons-geometric-study.ai"
+    source = args.source_path or root / "design/lism-icons-geometric-study.ai"
     source = source.resolve()
     if not source.is_file():
         parser.error(f"Illustrator file not found: {source}")

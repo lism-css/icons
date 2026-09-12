@@ -48,7 +48,7 @@ def main():
     mode.add_argument("--apply", action="store_true", help="Back up, place, and save the document")
 
     args = parser.parse_args()
-    source = (args.source_path or root / "design/original/lism-icons-geometric-study.ai").resolve()
+    source = (args.source_path or root / "design/lism-icons-geometric-study.ai").resolve()
     if not source.is_file():
         parser.error(f"Illustrator file not found: {source}")
     if args.command == "place" and not args.symbol.startswith("LISM / "):

@@ -45,6 +45,6 @@ import { Home, StarHalf } from '@lism-css/icons/astro';
 
 収録アイコンは、円・直線・共通の寸法から設計したオリジナルです。MITライセンスで提供します。ライセンス本文は[LICENSE](./LICENSE)を参照してください。
 
-編集元は`design/original/lism-icons-geometric-study.ai`です。regular・fill一覧に配置した原寸マスターから、出力専用の`design/lism-icons.ai`を生成します。設計方針は[設計文書](./design/original/design.md)、同期・SVG書き出し・パッケージ生成の操作は[制作スクリプトの使い方](./scripts/README.md)を参照してください。
+編集元は`design/lism-icons-geometric-study.ai`です。regular・fill一覧に配置した原寸マスターから、出力専用の`design/lism-icons.ai`を生成します。設計方針は[設計文書](./design/design.md)、同期・SVG書き出し・パッケージ生成の操作は[制作スクリプトの使い方](./scripts/README.md)を参照してください。
 
 `src/svg/`には出力用.aiから書き出したSVGを保存し、アイコンデータとReact/Astroコンポーネントの生成入力にします。ビルドでは.aiを読みません。アイコンの追加・削除はSVGの一覧から自動で反映されます。

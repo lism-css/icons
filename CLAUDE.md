@@ -4,7 +4,7 @@
 
 Lism Icons（npm: `@lism-css/icons`）は、ReactとAstroで使えるオリジナルのSVGアイコン集。Lism CSS本体（`lism-css`リポジトリ）には依存しない。単一パッケージのリポジトリで、lint系設定はルート直下。
 
-- `design/`: 正本のIllustratorファイル（git LFS）と[設計文書](design/original/design.md)
+- `design/`: 正本のIllustratorファイル（git LFS）と[設計文書](design/design.md)
 - `src/svg/`: 出力用.aiから書き出したSVG。ビルド入力
 - `src/react/`・`packages/astro/`・`src/data.ts`: SVGから生成するコンポーネントとデータ。Git管理するが手で編集しない
 - `scripts/`: 同期・書き出し・生成スクリプト — [README](scripts/README.md)

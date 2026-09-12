@@ -14,7 +14,7 @@ function canonicalPath(filePath) {
 
 export function generateJsx(
   outputDir,
-  { sourcePath = path.join(packageDir, 'design/original/lism-icons-geometric-study.ai'), aiPath = path.join(packageDir, 'design/lism-icons.ai') } = {}
+  { sourcePath = path.join(packageDir, 'design/lism-icons-geometric-study.ai'), aiPath = path.join(packageDir, 'design/lism-icons.ai') } = {}
 ) {
   outputDir = path.resolve(outputDir);
   sourcePath = canonicalPath(path.resolve(sourcePath));

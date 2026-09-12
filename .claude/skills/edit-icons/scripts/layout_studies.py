@@ -17,7 +17,7 @@ def main():
     parser.add_argument("--source-path", type=Path)
     parser.add_argument("--allow-unsaved", action="store_true", help="Explicitly allow saving live user edits with a backup")
     args = parser.parse_args()
-    source = (args.source_path or root / "design/original/lism-icons-geometric-study.ai").resolve()
+    source = (args.source_path or root / "design/lism-icons-geometric-study.ai").resolve()
     if not source.is_file():
         parser.error(f"Illustrator file not found: {source}")
     work = Path(tempfile.mkdtemp(prefix="lism-layout-studies-"))
