@@ -325,6 +325,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M2,7.75h20"/><path d="M2,16.25h20"/>',
   },
+  minus: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M3,12h18"/>',
+  },
   note: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -334,6 +339,11 @@ export const icons = {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M9.5,16.265c-.525.105-.976-.032-1.355-.41-.378-.378-.515-.83-.41-1.355l.485-2.424c.059-.297.196-.552.41-.766L16.939,3c.293-.293.646-.439,1.061-.439s.768.146,1.061.439l1.939,1.939c.293.293.439.646.439,1.061s-.146.768-.439,1.061l-8.309,8.309c-.214.214-.47.351-.766.41l-2.424.485ZM18.75,7.189l1.189-1.189-1.939-1.939-1.189,1.189,1.939,1.939Z" fill="currentColor" stroke="none"/><path d="M11.25,3h-6c-1.243,0-2.25,1.007-2.25,2.25v13.5c0,1.243,1.007,2.25,2.25,2.25h13.5c1.243,0,2.25-1.007,2.25-2.25v-6"/>',
+  },
+  plus: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M3,12h18"/><path d="M12,3v18"/>',
   },
   question: {
     viewBox: '0 0 24 24',
