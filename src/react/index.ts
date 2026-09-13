@@ -1,5 +1,6 @@
 // 自動生成: scripts/generate.mjs（編集元: src/svg/）
 export { default as AlertIcon } from './AlertIcon.js';
+export { default as AlertCircleIcon } from './AlertCircleIcon.js';
 export { default as AlertFillIcon } from './AlertFillIcon.js';
 export { default as ArrowDownIcon } from './ArrowDownIcon.js';
 export { default as ArrowHalfRightIcon } from './ArrowHalfRightIcon.js';
@@ -41,6 +42,7 @@ export { default as ClockwiseIcon } from './ClockwiseIcon.js';
 export { default as DotsIcon } from './DotsIcon.js';
 export { default as DotsVerticalIcon } from './DotsVerticalIcon.js';
 export { default as DownloadIcon } from './DownloadIcon.js';
+export { default as ExclamationMarkIcon } from './ExclamationMarkIcon.js';
 export { default as FolderIcon } from './FolderIcon.js';
 export { default as FolderFillIcon } from './FolderFillIcon.js';
 export { default as GearIcon } from './GearIcon.js';
@@ -66,6 +68,7 @@ export { default as NoteIcon } from './NoteIcon.js';
 export { default as NoteFillIcon } from './NoteFillIcon.js';
 export { default as QuestionIcon } from './QuestionIcon.js';
 export { default as QuestionFillIcon } from './QuestionFillIcon.js';
+export { default as QuestionMarkIcon } from './QuestionMarkIcon.js';
 export { default as SearchIcon } from './SearchIcon.js';
 export { default as SignInIcon } from './SignInIcon.js';
 export { default as SignOutIcon } from './SignOutIcon.js';

@@ -1,5 +1,6 @@
 // 自動生成: scripts/generate.mjs（編集元: src/svg/）
 export { default as AlertIcon } from './AlertIcon.astro';
+export { default as AlertCircleIcon } from './AlertCircleIcon.astro';
 export { default as AlertFillIcon } from './AlertFillIcon.astro';
 export { default as ArrowDownIcon } from './ArrowDownIcon.astro';
 export { default as ArrowHalfRightIcon } from './ArrowHalfRightIcon.astro';
@@ -41,6 +42,7 @@ export { default as ClockwiseIcon } from './ClockwiseIcon.astro';
 export { default as DotsIcon } from './DotsIcon.astro';
 export { default as DotsVerticalIcon } from './DotsVerticalIcon.astro';
 export { default as DownloadIcon } from './DownloadIcon.astro';
+export { default as ExclamationMarkIcon } from './ExclamationMarkIcon.astro';
 export { default as FolderIcon } from './FolderIcon.astro';
 export { default as FolderFillIcon } from './FolderFillIcon.astro';
 export { default as GearIcon } from './GearIcon.astro';
@@ -66,6 +68,7 @@ export { default as NoteIcon } from './NoteIcon.astro';
 export { default as NoteFillIcon } from './NoteFillIcon.astro';
 export { default as QuestionIcon } from './QuestionIcon.astro';
 export { default as QuestionFillIcon } from './QuestionFillIcon.astro';
+export { default as QuestionMarkIcon } from './QuestionMarkIcon.astro';
 export { default as SearchIcon } from './SearchIcon.astro';
 export { default as SignInIcon } from './SignInIcon.astro';
 export { default as SignOutIcon } from './SignOutIcon.astro';
