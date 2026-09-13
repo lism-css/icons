@@ -200,6 +200,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M21.659,14.588c-1.171,4.372-5.133,7.412-9.659,7.412-5.523,0-10-4.477-10-10S6.477,2,12,2c2.652,0,5.196,1.054,7.071,2.929l2.929,2.929"/><path d="M18.25,7.858h3.75v-3.75"/><path d="M12,6v6l3.354,1.677"/>',
   },
+  copy: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M15,6v-.75c0-1.243-1.007-2.25-2.25-2.25h-7.5c-1.243,0-2.25,1.007-2.25,2.25v7.5c0,1.243,1.007,2.25,2.25,2.25h.75"/><rect x="9" y="9" width="12" height="12" rx="2.25" ry="2.25"/>',
+  },
   dots: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -340,6 +345,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M9.5,16.265c-.525.105-.976-.032-1.355-.41-.378-.378-.515-.83-.41-1.355l.485-2.424c.059-.297.196-.552.41-.766L16.939,3c.293-.293.646-.439,1.061-.439s.768.146,1.061.439l1.939,1.939c.293.293.439.646.439,1.061s-.146.768-.439,1.061l-8.309,8.309c-.214.214-.47.351-.766.41l-2.424.485ZM18.75,7.189l1.189-1.189-1.939-1.939-1.189,1.189,1.939,1.939Z" fill="currentColor" stroke="none"/><path d="M11.25,3h-6c-1.243,0-2.25,1.007-2.25,2.25v13.5c0,1.243,1.007,2.25,2.25,2.25h13.5c1.243,0,2.25-1.007,2.25-2.25v-6"/>',
   },
+  pencil: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M4.853,20.029c-.246.049-.5-.028-.677-.205s-.254-.432-.205-.677l.485-2.424c.029-.145.1-.279.205-.383l12.059-12.059c.141-.141.331-.22.53-.22s.39.079.53.22l1.939,1.939c.293.293.293.768,0,1.061l-12.059,12.059c-.105.105-.238.176-.383.205l-2.424.485Z"/><path d="M15,6l3,3"/>',
+  },
   plus: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -404,6 +414,11 @@ export const icons = {
     viewBox: '0 0 24 24',
     attributes: { fill: 'currentColor', stroke: 'none' },
     body: '<path d="M3.75,5.25c0-1,.5-1.5,1.5-1.5h7.939c.414,0,.768.146,1.061.439l7.189,7.189c.586.586.879,1.293.879,2.121s-.293,1.536-.879,2.121l-5.818,5.818c-.586.586-1.293.879-2.121.879s-1.536-.293-2.121-.879l-7.189-7.189c-.293-.293-.439-.646-.439-1.061v-7.939ZM9,7.875c0-.621-.504-1.125-1.125-1.125s-1.125.504-1.125,1.125.504,1.125,1.125,1.125,1.125-.504,1.125-1.125Z"/>',
+  },
+  trash: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<line x1="14.25" y1="10" x2="14.25" y2="17"/><line x1="9.75" y1="10" x2="9.75" y2="17"/><path d="M5,6v12.75c0,1.243,1.007,2.25,2.25,2.25h9.5c1.243,0,2.25-1.007,2.25-2.25V6"/><path d="M9,6v-2.25c0-.414.336-.75.75-.75h4.5c.414,0,.75.336.75.75v2.25"/><line x1="3" y1="6" x2="21" y2="6"/>',
   },
   upload: {
     viewBox: '0 0 24 24',
