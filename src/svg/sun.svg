@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="sun">
+    <circle id="c" data-name="Disc R5" cx="12" cy="12" r="5" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="d" data-name="Ray 0 degrees / R8 to R10" d="M20,12h2" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="e" data-name="Ray 45 degrees / R8 to R10" d="M17.657,17.657l1.414,1.414" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="f" data-name="Ray 90 degrees / R8 to R10" d="M12,20v2" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="g" data-name="Ray 135 degrees / R8 to R10" d="M6.343,17.657l-1.414,1.414" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="h" data-name="Ray 180 degrees / R8 to R10" d="M4,12h-2" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="i" data-name="Ray 225 degrees / R8 to R10" d="M6.343,6.343l-1.414-1.414" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="j" data-name="Ray 270 degrees / R8 to R10" d="M12,4v-2" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="k" data-name="Ray 315 degrees / R8 to R10" d="M17.657,6.343l1.414-1.414" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

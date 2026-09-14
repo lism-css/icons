@@ -1,4 +1,4 @@
-基準日: 2026-09-14・コミットb2ac6d9（作業ツリーの変更を含む）
+基準日: 2026-09-14・コミット0749b9b（作業ツリーの変更を含む）
 
 # 独自アイコンの設計
 
@@ -253,6 +253,8 @@ download・uploadは、全体の骨格をsign-in/outと同じ18×18の正方形�
 
 線のキャレットは45°のV字の頂点をR0.75で丸め、骨格のサイズは[共通の段階](#比率とサイズの段階を分ける)から選ぶ。線・塗りとも4方向を用意し、下向きを中心`(12,12)`で回転して派生させる。
 
+`sun`は中心`(12,12)`のR5の円に、45°ごとの8本の光線を中心から8の位置から10の位置まで引く。円のインクと光線のインクの隙間は1.5になる。`moon`はR10の円盤から、同じR10の円を315°方向へ6ずらしたものを引いた三日月で、先端は2円の交点とし角のまま残す。`globe`はR10の円に赤道と、両極を通る矢高5の子午線（R12.5、中心`(19.5,12)`・`(4.5,12)`）を重ねる。`translate`は左上に「文」（横棒9.5、上の縦線、R12の円弧ストローク2本）、右下に「A」（水平1:垂直2の斜線2本と横棒）を置く。R12.5・R12は共通の円形サイズに加えず、作図では灰色の通常パスで示す。
+
 `x`は中心`(12,12)`のR10の円に、水平軸に対して±45°の直径を2本引く。中心線の端点は円周上に置き、外接する正方形の幅・高さは`10√2 ≈ 14.142`とする。線幅は共通値を維持し、作図にはR10のガイド円を表示する。
 
 `plus`は全体が正方形なので正方形の上限18を使い、`(3,12)`〜`(21,12)`と`(12,3)`〜`(12,21)`の2本の直線を中心で交差させる。`x`の外接14.142より大きいが、軸方向に伸びる形は同じ長さの斜線より小さく見えるため、R10の直径2本と見た目の重さが釣り合う。`minus`は`plus`の水平線だけを残す。
@@ -323,7 +325,7 @@ Illustratorの円弧は標準的な3次ベジェ曲線による近似として�
 
 塗り版は、regularのストローク込みの外形を基準にする。線幅1.5の中心線から外へ0.75広げた輪郭を閉じ、その内側を塗る。塗り版は、塗りの輪郭と必要な線を編集できるパスとして保持する。線を併用する場合はregularの線幅1.5を使う。light・boldに合わせた外形の変更は行わない。
 
-塗り版は、ハート・星・ブックマーク・4方向のキャレットに加え、clock・ban・check-circle・question・info・user・folder・calendar・book・note・chat・lock・lock-open・tag・alert・warning・home・good・bad・gear・lightbulb・cartに用意する。clockwiseは線版のみとする。arrow系、check単体、x、plus、minus、exclamation-mark、question-mark、menu系、dots系、search、link、sign-in/out、download/uploadは線主体のため、塗り版を作らない。pencil・trash・copy・bell・mail・phone・image・file・refresh・share・eye・eye-offは線版だけを用意し、塗り版は未作成とする（必要になったら個別に判断する）。キャレットは既存の三角塗りの形を維持する。
+塗り版は、ハート・星・ブックマーク・4方向のキャレットに加え、clock・ban・check-circle・question・info・user・folder・calendar・book・note・chat・lock・lock-open・tag・alert・warning・home・good・bad・gear・lightbulb・cartに用意する。clockwiseは線版のみとする。arrow系、check単体、x、plus、minus、exclamation-mark、question-mark、menu系、dots系、search、link、sign-in/out、download/uploadは線主体のため、塗り版を作らない。pencil・trash・copy・bell・mail・phone・image・file・refresh・share・eye・eye-off・sun・moon・globe・translateは線版だけを用意し、塗り版は未作成とする（必要になったら個別に判断する）。キャレットは既存の三角塗りの形を維持する。
 
 塗り版は、部品の役割に合わせて輪郭を塗るか、線を残すかを選ぶ。内部の針・記号・点・穴は必要な部分を抜く。線版で接続していた区切り線を、そのまま白抜きへ置き換えることは共通ルールにしない。鍵のアーチ、電球の台座、カートの支柱や車輪は輪郭へ変換した塗りのパスを使う。人物の肩は下辺で閉じ、家は屋根と本体をつないで入口を開ける。
 
