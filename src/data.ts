@@ -230,6 +230,16 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M12,4.5v11.25"/><circle cx="12" cy="19.125" r=".375"/>',
   },
+  eye: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M2.835,12c1.59-3.644,5.19-6,9.165-6s7.575,2.356,9.165,6c-1.59,3.644-5.19,6-9.165,6s-7.575-2.356-9.165-6Z"/><circle cx="12" cy="12" r="2.5"/>',
+  },
+  'eye-off': {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M2.835,12c1.59-3.644,5.19-6,9.165-6s7.575,2.356,9.165,6c-1.59,3.644-5.19,6-9.165,6s-7.575-2.356-9.165-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="M4.929,4.929l14.142,14.142"/>',
+  },
   file: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -395,10 +405,20 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M8.25,8.25c0-2.071,1.679-3.75,3.75-3.75s3.75,1.679,3.75,3.75c0,1.83-1.321,3.393-3.125,3.698-.361.061-.625.374-.625.74v3.063"/><circle cx="12" cy="19.125" r=".375"/>',
   },
+  refresh: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M2.341,14.588c-1.171-4.372.74-8.985,4.659-11.248s8.871-1.611,12.071,1.589l2.929,2.929"/><path d="M18.25,7.858h3.75v-3.75"/><path d="M21.659,9.412c1.171,4.372-.74,8.985-4.659,11.248s-8.871,1.611-12.071-1.589l-2.929-2.929"/><path d="M5.75,16.142h-3.75v3.75"/>',
+  },
   search: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<circle cx="10.5" cy="10.5" r="7.5"/><path d="M15.803,15.803l5.197,5.197"/>',
+  },
+  share: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M7.736,10.882l8.528-4.264"/><path d="M7.736,13.118l8.528,4.264"/><circle cx="5.5" cy="12" r="2.5"/><circle cx="18.5" cy="5.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>',
   },
   'sign-in': {
     viewBox: '0 0 24 24',
