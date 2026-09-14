@@ -230,6 +230,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M12,4.5v11.25"/><circle cx="12" cy="19.125" r=".375"/>',
   },
+  file: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M7.125,2.5h7.5l4.5,4.5v12.25c0,1.243-1.007,2.25-2.25,2.25H7.125c-1.243,0-2.25-1.007-2.25-2.25V4.75c0-1.243,1.007-2.25,2.25-2.25Z"/><path d="M14.625,2.5v3.75c0,.414.336.75.75.75h3.75"/>',
+  },
   folder: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -279,6 +284,11 @@ export const icons = {
     viewBox: '0 0 24 24',
     attributes: { fill: 'currentColor', stroke: 'none' },
     body: '<path d="M2.47,11.47l1.501-1.501,6.969-6.969c.293-.293.646-.439,1.061-.439s.768.146,1.061.439l6.97,6.97,1.5,1.5c.035.035.066.073.093.114.027.041.05.084.069.13.019.045.033.092.043.141s.014.097.014.146-.005.098-.014.146c-.01.048-.024.095-.043.141-.019.045-.042.089-.069.13-.027.041-.058.079-.093.114-.07.07-.151.125-.243.163s-.188.057-.287.057h-1.05v7.5c0,1-.5,1.5-1.5,1.5h-3.3c-1,0-1.5-.5-1.5-1.5v-5.7h-3.3v5.7c0,1-.5,1.5-1.5,1.5h-3.3c-1,0-1.5-.5-1.5-1.5v-7.5h-1.05c-.049,0-.098-.005-.146-.014-.048-.01-.095-.024-.141-.043-.045-.019-.089-.042-.13-.069s-.079-.058-.114-.093c-.035-.035-.066-.073-.093-.114-.027-.041-.05-.084-.069-.13s-.033-.092-.043-.141c-.01-.048-.014-.097-.014-.146,0-.099.019-.195.057-.287s.092-.173.163-.243Z"/>',
+  },
+  image: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<rect x="2.5" y="4.875" width="19" height="14.25" rx="2.25" ry="2.25"/><polyline points="2.5 16.875 7.5 11.875 9.75 14.125 14.25 9.625 21.5 16.875"/><circle cx="7.5" cy="8.25" r=".375"/>',
   },
   info: {
     viewBox: '0 0 24 24',
