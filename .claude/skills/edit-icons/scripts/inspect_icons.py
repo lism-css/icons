@@ -5,6 +5,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 
@@ -44,6 +45,7 @@ def main():
     if result.returncode:
         parser.exit(result.returncode, f"{result.stderr or result.stdout}\nInspection files: {work}\n")
     report = json.loads(result_file.read_text())
+    shutil.rmtree(work, ignore_errors=True)
     print(json.dumps({"saved": report["saved"], "readOnly": True}, ensure_ascii=False))
     for icon in report["icons"]:
         print(json.dumps(icon, ensure_ascii=False, separators=(",", ":")))
