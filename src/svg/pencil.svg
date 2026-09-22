@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="pencil">
+    <path d="M4.853,20.029c-.246.049-.5-.028-.677-.205s-.254-.432-.205-.677l.485-2.424c.029-.145.1-.279.205-.383l12.059-12.059c.141-.141.331-.22.53-.22s.39.079.53.22l1.939,1.939c.293.293.293.768,0,1.061l-12.059,12.059c-.105.105-.238.176-.383.205l-2.424.485Z" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path d="M15,6l3,3" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="refresh">
+    <path d="M2.065,13.142C1.435,7.655,5.371,2.696,10.858,2.065c3.031-.348,6.056.706,8.213,2.863l2.929,2.929" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path d="M18.25,7.858h3.75v-3.75" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path d="M21.935,10.858c.631,5.487-3.306,10.446-8.792,11.077-3.031.348-6.056-.706-8.213-2.863l-2.929-2.929" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path d="M5.75,16.142h-3.75v3.75" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

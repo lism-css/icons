@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="external-link">
+    <g>
+      <rect id="c" data-name="coordinate-frame" width="24" height="24" fill="none"/>
+      <path d="M10.5,7.5h-5.25c-1.243,0-2.25,1.007-2.25,2.25v9c0,1.243,1.007,2.25,2.25,2.25h9c1.243,0,2.25-1.007,2.25-2.25v-5.25" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line x1="10.5" y1="13.5" x2="21" y2="3" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path d="M15,3h6v6" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

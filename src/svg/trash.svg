@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="trash">
+    <line id="c" data-name="Inner line right" x1="14.25" y1="10" x2="14.25" y2="17" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="d" data-name="Inner line left" x1="9.75" y1="10" x2="9.75" y2="17" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="e" data-name="Body" d="M5,6v12.75c0,1.243,1.007,2.25,2.25,2.25h9.5c1.243,0,2.25-1.007,2.25-2.25V6" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="f" data-name="Handle" d="M9,6v-2.25c0-.414.336-.75.75-.75h4.5c.414,0,.75.336.75.75v2.25" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="g" data-name="Lid" x1="3" y1="6" x2="21" y2="6" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>
