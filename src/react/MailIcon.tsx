@@ -24,8 +24,8 @@ const MailIcon = /* @__PURE__ */ forwardRef<SVGSVGElement, MailIconProps>(functi
       {...props}
       ref={ref}
     >
-      <rect x="2.5" y="5.667" width="19" height="12.667" rx="2.25" ry="2.25" />
-      <polyline points="2.5 7.917 12 12 21.5 7.917" />
+      <path d="M4.75,5.667h14.5c1.243,0,2.25,1.007,2.25,2.25h0v8.167c0,1.243-1.007,2.25-2.25,2.25H4.75c-1.243,0-2.25-1.007-2.25-2.25h0V7.917c0-1.243,1.007-2.25,2.25-2.25Z" />
+      <path d="M2.5,7.917l9.12,5.36c.235.138.525.138.76,0l9.12-5.36" />
       {children}
     </svg>
   );

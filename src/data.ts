@@ -83,7 +83,7 @@ export const icons = {
   bell: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<path d="M4.5,11.25c0-4.142,3.358-7.5,7.5-7.5s7.5,3.358,7.5,7.5v5.25l1.5,1.5H3l1.5-1.5v-5.25Z"/><path d="M9.75,18c0,1.243,1.007,2.25,2.25,2.25s2.25-1.007,2.25-2.25"/>',
+    body: '<path d="M7,8.625c0-2.761,2.239-5,5-5s5,2.239,5,5v5.189c0,.199.079.39.22.53l2.5,2.5c.293.293.293.768,0,1.061-.141.141-.331.22-.53.22H4.811c-.414,0-.75-.336-.75-.75,0-.199.079-.39.22-.53l2.5-2.5c.141-.141.22-.331.22-.53v-5.189Z"/><path d="M9.75,18.125c0,1.243,1.007,2.25,2.25,2.25s2.25-1.007,2.25-2.25"/>',
   },
   book: {
     viewBox: '0 0 24 24',
@@ -205,10 +205,20 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M21.659,14.588c-1.171,4.372-5.133,7.412-9.659,7.412-5.523,0-10-4.477-10-10S6.477,2,12,2c2.652,0,5.196,1.054,7.071,2.929l2.929,2.929"/><path d="M18.25,7.858h3.75v-3.75"/><path d="M12,6v6l3.354,1.677"/>',
   },
+  command: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M8,5.5c0-1.381-1.119-2.5-2.5-2.5s-2.5,1.119-2.5,2.5,1.119,2.5,2.5,2.5h13c1.381,0,2.5-1.119,2.5-2.5s-1.119-2.5-2.5-2.5-2.5,1.119-2.5,2.5v13c0,1.381,1.119,2.5,2.5,2.5s2.5-1.119,2.5-2.5-1.119-2.5-2.5-2.5H5.5c-1.381,0-2.5,1.119-2.5,2.5s1.119,2.5,2.5,2.5,2.5-1.119,2.5-2.5V5.5Z"/>',
+  },
   copy: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M15,6v-.75c0-1.243-1.007-2.25-2.25-2.25h-7.5c-1.243,0-2.25,1.007-2.25,2.25v7.5c0,1.243,1.007,2.25,2.25,2.25h.75"/><rect x="9" y="9" width="12" height="12" rx="2.25" ry="2.25"/>',
+  },
+  desktop: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M4.75,4.281h14.5c1.243,0,2.25,1.007,2.25,2.25v6.188c0,1.243-1.007,2.25-2.25,2.25H4.75c-1.243,0-2.25-1.007-2.25-2.25h0v-6.188c0-1.243,1.007-2.25,2.25-2.25Z"/><line x1="12" y1="14.969" x2="12" y2="19.719"/><line x1="7.25" y1="19.719" x2="16.75" y2="19.719"/>',
   },
   dots: {
     viewBox: '0 0 24 24',
@@ -230,6 +240,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M12,4.5v11.25"/><circle cx="12" cy="19.125" r=".375"/>',
   },
+  'external-link': {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M10.5,7.5h-5.25c-1.243,0-2.25,1.007-2.25,2.25v9c0,1.243,1.007,2.25,2.25,2.25h9c1.243,0,2.25-1.007,2.25-2.25v-5.25"/><line x1="10.5" y1="13.5" x2="21" y2="3"/><path d="M15,3h6v6"/>',
+  },
   eye: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -238,7 +253,7 @@ export const icons = {
   'eye-off': {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<path d="M2.835,12c1.59-3.644,5.19-6,9.165-6s7.575,2.356,9.165,6c-1.59,3.644-5.19,6-9.165,6s-7.575-2.356-9.165-6Z"/><circle cx="12" cy="12" r="2.5"/><path d="M4.929,4.929l14.142,14.142"/>',
+    body: '<path d="M10.375,6.133c4.515-.743,8.959,1.673,10.79,5.867-.477,1.093-1.145,2.091-1.974,2.949"/><path d="M13.625,17.867c-4.515.743-8.959-1.673-10.79-5.867.477-1.093,1.145-2.091,1.974-2.949"/><path d="M4.929,4.929l14.142,14.142"/>',
   },
   file: {
     viewBox: '0 0 24 24',
@@ -303,7 +318,7 @@ export const icons = {
   image: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<rect x="2.5" y="4.875" width="19" height="14.25" rx="2.25" ry="2.25"/><polyline points="2.5 16.875 7.5 11.875 9.75 14.125 14.25 9.625 21.5 16.875"/><circle cx="7.5" cy="8.25" r=".375"/>',
+    body: '<path d="M4.75,4.875h14.5c1.243,0,2.25,1.007,2.25,2.25v9.75c0,1.243-1.007,2.25-2.25,2.25H4.75c-1.243,0-2.25-1.007-2.25-2.25V7.125c0-1.243,1.007-2.25,2.25-2.25Z"/><path d="M2.5,16.875l4.47-4.47c.293-.293.768-.293,1.061,0l1.189,1.189c.293.293.768.293,1.061,0l3.439-3.439c.293-.293.768-.293,1.061,0l6.72,6.72"/><circle cx="7.5" cy="8.25" r=".375"/>',
   },
   info: {
     viewBox: '0 0 24 24',
@@ -353,7 +368,7 @@ export const icons = {
   mail: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<rect x="2.5" y="5.667" width="19" height="12.667" rx="2.25" ry="2.25"/><polyline points="2.5 7.917 12 12 21.5 7.917"/>',
+    body: '<path d="M4.75,5.667h14.5c1.243,0,2.25,1.007,2.25,2.25h0v8.167c0,1.243-1.007,2.25-2.25,2.25H4.75c-1.243,0-2.25-1.007-2.25-2.25h0V7.917c0-1.243,1.007-2.25,2.25-2.25Z"/><path d="M2.5,7.917l9.12,5.36c.235.138.525.138.76,0l9.12-5.36"/>',
   },
   menu: {
     viewBox: '0 0 24 24',
@@ -393,7 +408,7 @@ export const icons = {
   phone: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<path d="M9.757,10.125l-2.091-6.602c-.048-.152-.143-.285-.272-.379s-.284-.145-.443-.145h-2.451c-.398,0-.779.158-1.061.439s-.439.663-.439,1.061c0,9.113,7.387,16.5,16.5,16.5.398,0,.779-.158,1.061-.439s.439-.663.439-1.061v-2.451c0-.159-.051-.315-.145-.443s-.227-.224-.379-.272l-6.602-2.091c-1.71-.987-3.13-2.408-4.118-4.118Z"/>',
+    body: '<path d="M5.25,3h1.815c.269,0,.518.144.651.378l2.527,4.422c.155.271.126.61-.073.85l-2.121,2.564c-.207.251-.229.606-.055.881,1.002,1.575,2.337,2.91,3.912,3.912.274.175.63.152.881-.055l2.564-2.121c.241-.199.579-.228.85-.073l4.422,2.527c.234.134.378.382.378.651v1.815c0,1.243-1.007,2.25-2.25,2.25-8.698,0-15.75-7.052-15.75-15.75,0-1.243,1.007-2.25,2.25-2.25Z"/>',
   },
   plus: {
     viewBox: '0 0 24 24',
@@ -418,7 +433,7 @@ export const icons = {
   refresh: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<path d="M2.341,14.588c-1.171-4.372.74-8.985,4.659-11.248s8.871-1.611,12.071,1.589l2.929,2.929"/><path d="M18.25,7.858h3.75v-3.75"/><path d="M21.659,9.412c1.171,4.372-.74,8.985-4.659,11.248s-8.871,1.611-12.071-1.589l-2.929-2.929"/><path d="M5.75,16.142h-3.75v3.75"/>',
+    body: '<path d="M2.065,13.142C1.435,7.655,5.371,2.696,10.858,2.065c3.031-.348,6.056.706,8.213,2.863l2.929,2.929"/><path d="M18.25,7.858h3.75v-3.75"/><path d="M21.935,10.858c.631,5.487-3.306,10.446-8.792,11.077-3.031.348-6.056-.706-8.213-2.863l-2.929-2.929"/><path d="M5.75,16.142h-3.75v3.75"/>',
   },
   search: {
     viewBox: '0 0 24 24',
@@ -439,6 +454,11 @@ export const icons = {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<path d="M12,3h-6.75c-1.243,0-2.25,1.007-2.25,2.25v13.5c0,1.243,1.007,2.25,2.25,2.25h6.75"/><path d="M9,12h12"/><path d="M17,8l4,4-4,4"/>',
+  },
+  smartphone: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M9.25,2h5.5c1.243,0,2.25,1.007,2.25,2.25v15.5c0,1.243-1.007,2.25-2.25,2.25h-5.5c-1.243,0-2.25-1.007-2.25-2.25V4.25c0-1.243,1.007-2.25,2.25-2.25Z"/><circle cx="12" cy="18.625" r=".375"/>',
   },
   star: {
     viewBox: '0 0 24 24',
@@ -465,6 +485,11 @@ export const icons = {
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
     body: '<circle cx="12" cy="12" r="5"/><path d="M20,12h2"/><path d="M17.657,17.657l1.414,1.414"/><path d="M12,20v2"/><path d="M6.343,17.657l-1.414,1.414"/><path d="M4,12h-2"/><path d="M6.343,6.343l-1.414-1.414"/><path d="M12,4v-2"/><path d="M17.657,6.343l1.414-1.414"/>',
   },
+  tablet: {
+    viewBox: '0 0 24 24',
+    attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
+    body: '<path d="M7.125,2.5h9.75c1.243,0,2.25,1.007,2.25,2.25v14.5c0,1.243-1.007,2.25-2.25,2.25H7.125c-1.243,0-2.25-1.007-2.25-2.25V4.75c0-1.243,1.007-2.25,2.25-2.25Z"/><circle cx="12" cy="18.125" r=".375"/>',
+  },
   tag: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
@@ -478,7 +503,7 @@ export const icons = {
   translate: {
     viewBox: '0 0 24 24',
     attributes: { fill: 'none', stroke: 'currentColor', 'stroke-width': '1.5', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' },
-    body: '<path d="M2.5,6h9.5"/><path d="M7.25,3v3"/><path d="M10.5,7.5c-.961,3.611-3.548,6.569-7,8"/><path d="M4.5,7.5c.983,3.321,3.353,6.055,6.5,7.5"/><path d="M12.25,21.5l4.75-9.5,4.75,9.5"/><path d="M14,18h6"/>',
+    body: '<path d="M2.5,6h9.5"/><path d="M7.25,3v3"/><path d="M10.25,6c-.92,3.91-3.735,7.1-7.5,8.5"/><path d="M4.25,6c.92,3.91,3.735,7.1,7.5,8.5"/><path d="M12.5,21.5l4.5-9,4.5,9"/><path d="M14,18.5h6"/>',
   },
   trash: {
     viewBox: '0 0 24 24',

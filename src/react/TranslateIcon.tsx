@@ -26,10 +26,10 @@ const TranslateIcon = /* @__PURE__ */ forwardRef<SVGSVGElement, TranslateIconPro
     >
       <path d="M2.5,6h9.5" />
       <path d="M7.25,3v3" />
-      <path d="M10.5,7.5c-.961,3.611-3.548,6.569-7,8" />
-      <path d="M4.5,7.5c.983,3.321,3.353,6.055,6.5,7.5" />
-      <path d="M12.25,21.5l4.75-9.5,4.75,9.5" />
-      <path d="M14,18h6" />
+      <path d="M10.25,6c-.92,3.91-3.735,7.1-7.5,8.5" />
+      <path d="M4.25,6c.92,3.91,3.735,7.1,7.5,8.5" />
+      <path d="M12.5,21.5l4.5-9,4.5,9" />
+      <path d="M14,18.5h6" />
       {children}
     </svg>
   );
