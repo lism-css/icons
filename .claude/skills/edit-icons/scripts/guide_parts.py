@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 
@@ -108,6 +109,8 @@ def main():
         parser.exit(result.returncode, f"{result.stderr or result.stdout}\nGuide-part files: {work}\n")
     if not result_file.exists():
         parser.exit(1, f"No result; inspect before retrying: {work}\n")
+    # The .ai backups here are the only recovery path, so drop them only after a clean run.
+    shutil.rmtree(work, ignore_errors=True)
 
 
 if __name__ == "__main__":

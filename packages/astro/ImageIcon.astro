@@ -1,0 +1,39 @@
+---
+// 自動生成: scripts/generate.mjs（編集元: src/svg/）
+import type { HTMLAttributes } from 'astro/types';
+type Props = HTMLAttributes<'svg'> & { size?: number | string; strokeWidth?: number | string; weight?: 'light' | 'regular' | 'bold' };
+const {
+  weight,
+  strokeWidth = weight && { light: 1, regular: 1.5, bold: 2 }[weight],
+  'stroke-width': nativeStrokeWidth,
+  size = '1em',
+  width = size,
+  height = size,
+  focusable = 'false',
+  'aria-hidden': ariaHidden,
+  role,
+  ...props
+} = Astro.props;
+const labelled = Boolean(props['aria-label'] || props['aria-labelledby']);
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  width={width}
+  height={height}
+  focusable={focusable}
+  aria-hidden={ariaHidden ?? (labelled ? undefined : true)}
+  role={role ?? (labelled ? 'img' : undefined)}
+  stroke-width={nativeStrokeWidth ?? strokeWidth ?? '1.5'}
+  {...props}
+  ><path
+    d="M4.75,4.875h14.5c1.243,0,2.25,1.007,2.25,2.25v9.75c0,1.243-1.007,2.25-2.25,2.25H4.75c-1.243,0-2.25-1.007-2.25-2.25V7.125c0-1.243,1.007-2.25,2.25-2.25Z"
+  ></path><path
+    d="M2.5,16.875l4.47-4.47c.293-.293.768-.293,1.061,0l1.189,1.189c.293.293.768.293,1.061,0l3.439-3.439c.293-.293.768-.293,1.061,0l6.72,6.72"
+  ></path><circle cx="7.5" cy="8.25" r=".375"></circle><slot /></svg
+>

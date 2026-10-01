@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="b" data-name="share">
+    <path id="c" data-name="Upper link 2:1" d="M7.736,10.882l8.528-4.264" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="d" data-name="Lower link 2:1" d="M7.736,13.118l8.528,4.264" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="e" data-name="Left node R2.5" cx="5.5" cy="12" r="2.5" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="f" data-name="Upper right node R2.5" cx="18.5" cy="5.5" r="2.5" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="g" data-name="Lower right node R2.5" cx="18.5" cy="18.5" r="2.5" fill="none" stroke="#282b35" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

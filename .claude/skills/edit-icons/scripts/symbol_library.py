@@ -4,6 +4,7 @@
 import argparse
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import tempfile
 
@@ -30,6 +31,8 @@ def main():
         parser.exit(result.returncode, f"{result.stderr or result.stdout}\nInspect before retrying: {work}\n")
     if not Path(config["result"]).exists():
         parser.exit(1, f"No result; inspect before retrying: {work}\n")
+    # The .ai backups here are the only recovery path, so drop them only after a clean run.
+    shutil.rmtree(work, ignore_errors=True)
 
 
 if __name__ == "__main__":
